@@ -1,0 +1,7 @@
+transform
+200.0 200.5
+sprite
+enemy.bmp
+enemy
+updown
+200 500

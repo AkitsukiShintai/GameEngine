@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="FrameController.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameObjectManager.cpp" />
+    <ClCompile Include="Component\Component.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Controller.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Sprite.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Transform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFactory.cpp" />
+    <ClCompile Include="Component\UpDown.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentMap.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Plane.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Program.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Renderer.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Texture.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Buffer.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\LineSegment2D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Math2D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Matrix2D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector2D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Affine.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Body.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Shape.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="PhysicsManager.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="Script\Script.cpp" />
+    <ClCompile Include="Component\Animation.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Component\UI.cpp" />
+    <ClCompile Include="Component\Number.cpp" />
+    <ClCompile Include="Render\Circle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FrameController.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="GameObjectManager.h" />
+    <ClInclude Include="Component\Component.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Controller.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Sprite.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Transform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="ObjectFactory.h" />
+    <ClInclude Include="Component\UpDown.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentMap.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Render\Plane.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Program.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Renderer.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Texture.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Buffer.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Affine.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\LineSegment2D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Math2D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Matrix2D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector2D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Shape.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Body.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="PhysicsManager.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="Script\Script.h" />
+    <ClInclude Include="Script\PlayerScript.h" />
+    <ClInclude Include="Script\ScriptList.hpp" />
+    <ClInclude Include="Script\Ground.h" />
+    <ClInclude Include="Component\Animation.h" />
+    <ClInclude Include="Script\Enemy1.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Script\ElectricShield.h" />
+    <ClInclude Include="Component\UI.h" />
+    <ClInclude Include="Script\Bullet.h" />
+    <ClInclude Include="Script\Blood.h" />
+    <ClInclude Include="Script\Hell.h" />
+    <ClInclude Include="Script\StartMenu.h" />
+    <ClInclude Include="Script\Enemy2.h" />
+    <ClInclude Include="Component\Number.h" />
+    <ClInclude Include="Script\Enemy3.h" />
+    <ClInclude Include="Script\GameOver.h" />
+    <ClInclude Include="Script\Wall.h" />
+    <ClInclude Include="Render\Circle.h" />
+    <ClInclude Include="Math\q_tree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Component">
+      <UniqueIdentifier>{5b1ceceb-1d54-4ae5-a914-42d3bfb5f94b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{a9562f0d-3253-4a8e-a154-5008f03658af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{e9628a14-e689-4203-b15d-49b50ad5a9c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{b254ff95-920a-410e-8ac8-a415dd11acd0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

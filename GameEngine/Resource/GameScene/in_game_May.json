@@ -1,0 +1,1857 @@
+{
+	"GameManager":{},
+	"background":{	
+	"render_order": 10000,
+		"transform": {
+			"posx": 0,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "background.jpg",
+			"width": 800,
+			"height": 600		
+		},
+		"ui":{}
+	},
+	"player0": {
+		"render_order": 1,
+		"transform": {
+			"posx": 50,
+			"posy": -150,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "mario_1.png",
+			"width": 50,
+			"height": 50			
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"AABB",
+			"top": 10,
+			"bottom":-25,
+			"left": -20,
+			"right": 20,
+			"collision":[
+			]
+			}
+		},
+		"controller": {
+		
+			"speed": 200.0
+		
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+			{
+				"sprite":"mario",
+				"index":1
+			},
+			{
+				"sprite":"enemy",
+				"index":1
+			}
+		
+		]
+		
+		}
+
+	},
+	"ground": {
+		"render_order": 0,
+		"transform":{
+			"posx": -350,
+			"posy": -250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 100	
+		}
+	},
+	"obstacle0": {
+		"render_order": 0,
+		"transform":{
+			"posx": 175,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle0": {
+		"render_order": 1,
+		"transform":{
+			"posx": 175,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"hell": {
+		"render_order": 1,
+		"transform":{
+			"posx": -0,
+			"posy": -280,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 10,
+			"bottom":-10,
+			"left": -10000,
+			"right": 10000,
+			"collision":[
+				"ground"
+			]
+			}
+			
+		}
+		
+	},
+	"bullet":{
+		"render_order":2,
+		"transform":{
+			"posx": 400 ,
+			"posy": 300,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "ground0.png",
+			"width": 20,
+			"height": 20	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"circle",
+			"radius":10,
+			"collision":[
+				"ground",
+				"shield"
+			]
+			}
+			
+		}
+	
+	},
+	"shield":{
+		"render_order":2,
+		"transform":{
+			"posx": 400 ,
+			"posy": 300,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "shield.png",
+			"width": 80,
+			"height": 80	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	
+	},
+	"blood1":{
+		"render_order":2,
+		"transform":{
+			"posx": -350 ,
+			"posy": 250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "blood.png",
+			"width": 100,
+			"height": 100	
+		},
+		"ui":{
+		
+		}	
+	},
+	"blood2":{
+		"render_order":2,
+		"transform":{
+			"posx": -250 ,
+			"posy": 250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "blood.png",
+			"width": 100,
+			"height": 100	
+		},
+		"ui":{
+		
+		}	
+	},
+	"blood3":{
+		"render_order":2,
+		"transform":{
+			"posx": -150 ,
+			"posy": 250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "blood.png",
+			"width": 100,
+			"height": 100	
+		},
+		"ui":{
+		
+		}	
+	},
+	"wall0": {
+		"render_order": 0,
+		"transform":{
+			"posx": 300,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 23,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall0": {
+		"render_order": 1,
+		"transform":{
+			"posx": 300,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"wall1": {
+		"render_order": 0,
+		"transform":{
+			"posx": 400,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 23,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall1": {
+		"render_order": 1,
+		"transform":{
+			"posx": 400,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1,
+			"collision":[
+				"ground"
+			]
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30
+			}
+		}
+	},
+	"enemy0": {
+		"render_order": 2,
+		"transform":{
+			"posx": 400 ,
+			"posy": -50,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy0_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy0",
+				"index":1
+				},
+				{
+				"sprite":"enemy1",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"circle",
+			"radius": 25,
+			"collision":[
+			
+			]
+			}
+		}
+	},
+	"obstacle1": {
+		"render_order": 0,
+		"transform":{
+			"posx": 575,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle1": {
+		"render_order": 1,
+		"transform":{
+			"posx": 575,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"wall2": {
+		"render_order": 0,
+		"transform":{
+			"posx": 750,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 23,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall2": {
+		"render_order": 1,
+		"transform":{
+			"posx": 750,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"wall3": {
+		"render_order": 0,
+		"transform":{
+			"posx": 850,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 23,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall3": {
+		"render_order": 1,
+		"transform":{
+			"posx": 850,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"obstacle2": {
+		"render_order": 0,
+		"transform":{
+			"posx": 1375,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle2": {
+		"render_order": 1,
+		"transform":{
+			"posx": 1375,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"wall4": {
+		"render_order": 0,
+		"transform":{
+			"posx": 1500,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 20,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall4": {
+		"render_order": 1,
+		"transform":{
+			"posx": 1500,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"enemy1": {
+		"render_order": 2,
+		"transform":{
+			"posx": 1675 ,
+			"posy": -175,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy3_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy1",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331,
+			"collision":[
+				
+			]
+			}
+		}
+	},
+	"enemy2": {
+		"render_order": 2,
+		"transform":{
+			"posx": 1775 ,
+			"posy": -175,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy3_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy1",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331,
+			"collision":[
+				
+			]
+			}
+		}
+	},
+	"wall5": {
+		"render_order": 0,
+		"transform":{
+			"posx": 1650,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 20,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall5": {
+		"render_order": 1,
+		"transform":{
+			"posx": 1650,
+			"posy": 24,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"wall6": {
+		"render_order": 0,
+		"transform":{
+			"posx": 1800,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 20,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall6": {
+		"render_order": 1,
+		"transform":{
+			"posx": 1800,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"wall7": {
+		"render_order": 0,
+		"transform":{
+			"posx": 1900,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 20,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall7": {
+		"render_order": 1,
+		"transform":{
+			"posx": 1900,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"obstacle3": {
+		"render_order": 0,
+		"transform":{
+			"posx": 1375,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle3": {
+		"render_order": 1,
+		"transform":{
+			"posx": 1375,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"obstacle4": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2650,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle4": {
+		"render_order": 1,
+		"transform":{
+			"posx": 2650,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"obstacle5": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2850,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle5": {
+		"render_order": 1,
+		"transform":{
+			"posx": 2850,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"enemy3": {
+		"render_order": 2,
+		"transform":{
+			"posx": 2750 ,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy0_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy0",
+				"index":1
+				},
+				{
+				"sprite":"enemy1",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331
+			}
+		}
+	},
+	"obstacle6": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2950,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"obstacle7": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2950,
+			"posy": -103,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle7": {
+		"render_order": 1,
+		"transform":{
+			"posx": 2950,
+			"posy": -71,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"wall8": {
+		"render_order": 0,
+		"transform":{
+			"posx": 3450,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 50	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 20,
+			"bottom":-25,
+			"left": -49,
+			"right": 49,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_wall8": {
+		"render_order": 1,
+		"transform":{
+			"posx": 3450,
+			"posy": -76,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"flower_enemy4": {
+		"render_order": 2,
+		"transform":{
+			"posx": 3450 ,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy3_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy3",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 25,
+			"bottom":-25,
+			"left": -25,
+			"right": 25,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"obstacle8": {
+		"render_order": 0,
+		"transform":{
+			"posx": 3650,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle8": {
+		"render_order": 1,
+		"transform":{
+			"posx": 3650,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"obstacle9": {
+		"render_order": 0,
+		"transform":{
+			"posx": 3750,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"obstacle10": {
+		"render_order": 0,
+		"transform":{
+			"posx": 3750,
+			"posy": -103,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle10": {
+		"render_order": 1,
+		"transform":{
+			"posx": 3750,
+			"posy": -71,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+
+	"home": {
+		"render_order": 2,
+		"transform":{
+			"posx": 4400,
+			"posy": -100,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "home.png",
+			"width": 300,
+			"height": 300	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 100,
+			"bottom":-140,
+			"left": -100,
+			"right": 100,
+			"collision":[
+				"ground"
+			]
+			}
+		}	
+	},
+	"obstacle11": {
+		"render_order": 0,
+		"transform":{
+			"posx": -350.0,
+			"posy": -50,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 500	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 250,
+			"bottom":-250,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"obstacle12": {
+		"render_order": 0,
+		"transform":{
+			"posx": 4650,
+			"posy": -50,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 500	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 250,
+			"bottom":-250,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"obstacle13": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2200,
+			"posy": -168,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -24,
+			"right": 24,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+		
+	},
+	"ground_obstacle13": {
+		"render_order": 1,
+		"transform":{
+			"posx": 2200,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -15,
+			"right": 15,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"ground1": {
+		"render_order": 0,
+		"transform":{
+			"posx": 500,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -1000,
+			"right": 525,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	}
+	,
+	"ground2": {
+		"render_order": 0,
+		"transform":{
+			"posx": 1750,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -625,
+			"right": 575,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"ground3": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2400,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -25,
+			"right": 25,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"ground4": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2550,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -25,
+			"right": 25,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"ground5": {
+		"render_order": 0,
+		"transform":{
+			"posx": 2900,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -275,
+			"right": 275,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"ground6": {
+		"render_order": 0,
+		"transform":{
+			"posx": 3250,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -25,
+			"right": 25,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	}
+	,
+	"ground7": {
+		"render_order": 0,
+		"transform":{
+			"posx": 3350,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -25,
+			"right": 25,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	},
+	"ground8": {
+		"render_order": 0,
+		"transform":{
+			"posx": 5000,
+			"posy": -201,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -1575,
+			"right": 25,
+			"collision":[
+				"ground"
+			]
+			}
+		}
+	}
+}

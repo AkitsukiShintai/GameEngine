@@ -1,0 +1,447 @@
+{
+	"GameManager":{},
+	"background":{	
+	"render_order": 10000,
+		"transform": {
+			"posx": 0,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "background.jpg",
+			"width": 800,
+			"height": 600		
+		},
+		"ui":{}
+	},
+	"player0": {
+		"render_order": 1,
+		"transform": {
+			"posx": -100,
+			"posy": -150,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "mario_1.png",
+			"width": 50,
+			"height": 50			
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"AABB",
+			"top": 10,
+			"bottom":-25,
+			"left": -20,
+			"right": 20
+			}
+		},
+		"controller": {
+		
+			"speed": 200.0
+		
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+			{
+				"sprite":"mario",
+				"index":1
+			},
+			{
+				"sprite":"enemy",
+				"index":1
+			}
+		
+		]
+		
+		}
+
+	},
+	"ground": {
+		"render_order": 0,
+		"transform":{
+			"posx": -350,
+			"posy": -250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 50,
+			"height": 100	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 50,
+			"bottom":-50,
+			"left": -24,
+			"right": 24
+			}
+		}
+	},
+	"obstacle": {
+		"render_order": 0,
+		"transform":{
+			"posx": -200,
+			"posy": -250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -50,
+			"right": 50
+			}
+		}
+		
+	},
+	"ground_obstacle": {
+		"render_order": 1,
+		"transform":{
+			"posx": -200,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30
+			}
+		}
+	},
+	"hell": {
+		"render_order": 1,
+		"transform":{
+			"posx": -0,
+			"posy": -500,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -10000,
+			"right": 10000
+			}
+		}
+	},
+	"enemy1": {
+		"render_order": 2,
+		"transform":{
+			"posx": 400 ,
+			"posy": 300,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy0_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy0",
+				"index":1
+				},
+				{
+				"sprite":"enemy1",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331
+			}
+		}
+	},
+	"bullet":{
+		"render_order":2,
+		"transform":{
+			"posx": 400 ,
+			"posy": 300,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "ground0.png",
+			"width": 20,
+			"height": 20	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331
+			}
+		}
+	
+	},
+	"shield":{
+		"render_order":2,
+		"transform":{
+			"posx": 400 ,
+			"posy": 300,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "shield.png",
+			"width": 80,
+			"height": 80	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331
+			}
+		}
+	
+	},
+	"blood1":{
+		"render_order":2,
+		"transform":{
+			"posx": -350 ,
+			"posy": 250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "blood.png",
+			"width": 100,
+			"height": 100	
+		},
+		"ui":{
+		
+		}	
+	},
+	"blood2":{
+		"render_order":2,
+		"transform":{
+			"posx": -250 ,
+			"posy": 250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "blood.png",
+			"width": 100,
+			"height": 100	
+		},
+		"ui":{
+		
+		}	
+	},
+	"blood3":{
+		"render_order":2,
+		"transform":{
+			"posx": -150 ,
+			"posy": 250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		
+		},
+		"sprite": {
+			"name": "blood.png",
+			"width": 100,
+			"height": 100	
+		},
+		"ui":{
+		
+		}	
+	},
+	"enemy2": {
+		"render_order": 2,
+		"transform":{
+			"posx": 800 ,
+			"posy": 300,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy3_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy1",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 1,
+			"shape":{
+			"type":"AABB",
+			"top": 0,
+			"bottom":-200,
+			"left": -331,
+			"right": 331
+			}
+		}
+	},
+	"enemy3": {
+		"render_order": 2,
+		"transform":{
+			"posx": 100 ,
+			"posy": -187.5,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "enemy3_0.png",
+			"width": 50,
+			"height": 50	
+		},
+		"animation":{
+			"during":0.3,
+			"type": "png",
+			"sprites":[
+				{
+				"sprite":"enemy3",
+				"index":1
+				}
+		
+			]	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 25,
+			"bottom":-25,
+			"left": -25,
+			"right": 25
+			}
+		}
+	},
+	"obstacle1": {
+		"render_order": 0,
+		"transform":{
+			"posx": 100,
+			"posy": -250,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"sprite": {
+			"name": "ground1.png",
+			"width": 100,
+			"height": 65	
+		},
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 30,
+			"bottom":-29,
+			"left": -50,
+			"right": 50
+			}
+		}
+		
+	},
+	"ground_obstacle1": {
+		"render_order": 1,
+		"transform":{
+			"posx": 100,
+			"posy": -136,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		
+		"body":{
+			"mass": 0,
+			"shape":{
+			"type":"AABB",
+			"top": 1,
+			"bottom":-1,
+			"left": -30,
+			"right": 30
+			}
+		}
+	}
+}

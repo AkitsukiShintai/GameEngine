@@ -1,0 +1,20 @@
+{
+	"gameover":{	
+	"render_order": -1,
+		"transform": {
+			"posx": 0,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "gameover.png",
+			"width": 800,
+			"height": 600		
+		},
+		"ui":{		
+		}	
+	}
+}

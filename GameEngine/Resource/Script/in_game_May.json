@@ -1,0 +1,148 @@
+{
+	
+	"player0": [
+	"player_script",
+	"blood"
+	],
+	"ground_obstacle0": [
+	"ground"
+	],
+	"enemy1":[
+	"enemy1"
+	],
+	"bullet":[
+	"bullet"
+	],
+	"shield":[
+	"electric_shield"
+	],
+	"hell":[
+	"hell"
+	],
+	"wall0":[
+	"wall"
+	],
+	"ground_wall0": [
+	"ground"
+	],
+	"enemy0": [
+	"enemy1"
+	],
+	"wall1":[
+	"wall"
+	],
+	"ground_wall1": [
+	"ground"
+	],
+	"ground_obstacle1": [
+	"ground"
+	],
+	"wall2":[
+	"wall"
+	],
+	"ground_wall2": [
+	"ground"
+	],
+	"wall3":[
+	"wall"
+	],
+	"ground_wall3": [
+	"ground"
+	],
+	"ground_obstacle2": [
+	"ground"
+	],
+	"wall4":[
+	"wall"
+	],
+	"ground_wall4": [
+	"ground"
+	],
+	"enemy1":[
+	"enemy2"
+	],
+	"enemy2":[
+	"enemy2"
+	],
+	"wall5":[
+	"wall"
+	],
+	"ground_wall5": [
+	"ground"
+	],
+	"wall6":[
+	"wall"
+	],
+	"ground_wall6": [
+	"ground"
+	],
+	"wall7":[
+	"wall"
+	],
+	"ground_wall7": [
+	"ground"
+	],
+	"ground_obstacle3": [
+	"ground"
+	],
+	"ground_obstacle4": [
+	"ground"
+	],
+	"ground_obstacle5": [
+	"ground"
+	],
+	"enemy3":[
+	"enemy1"
+	],
+	"ground_obstacle7": [
+	"ground"
+	],
+	"wall8":[
+	"wall"
+	],
+	"ground_wall8": [
+	"ground"
+	],
+	"flower_enemy4":[
+	"enemy3"
+	],
+	"ground_obstacle8": [
+	"ground"
+	],
+	"ground_obstacle10": [
+	"ground"
+	],
+	"home": [
+	"game_over"
+	],
+	"ground_obstacle13": [
+	"ground"
+	],
+	"ground1": [
+	"ground"
+	],
+	"ground": [
+	"ground"
+	],
+	"ground2": [
+	"ground"
+	],
+	"ground3": [
+	"ground"
+	],
+	"ground4": [
+	"ground"
+	],
+	"ground5": [
+	"ground"
+	],
+	"ground6": [
+	"ground"
+	],
+	"ground7": [
+	"ground"
+	],
+	"ground8": [
+	"ground"
+	]
+}

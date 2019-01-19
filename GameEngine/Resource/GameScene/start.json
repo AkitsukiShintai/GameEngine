@@ -1,0 +1,83 @@
+{
+
+	"background":{	
+	"render_order": 10000,
+		"transform": {
+			"posx": 0,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "start.png",
+			"width": 800,
+			"height": 600		
+		}	
+	},
+	"startUI":{	
+	"render_order": 1,
+		"transform": {
+			"posx": 0,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "start_buttom.png",
+			"width": 200,
+			"height": 80		
+		}	
+	},
+	"helpUI":{	
+	"render_order": 1,
+		"transform": {
+			"posx": 0,
+			"posy": -200,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "help_buttom.png",
+			"width": 200,
+			"height": 80		
+		}	
+	},
+	"outline":{	
+	"render_order": 2,
+		"transform": {
+			"posx": 0,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "outline.png",
+			"width": 204,
+			"height": 84		
+		}	
+	},
+	"help":{	
+	"render_order": 0,
+		"transform": {
+			"posx": 0,
+			"posy": 0,
+			"rotatex":0,
+			"rotatey":0,
+			"scalex": 1,
+			"scaley": 1
+		},
+		"sprite": {
+			"name": "help.png",
+			"width": 800,
+			"height": 600		
+		}	
+	}
+}
